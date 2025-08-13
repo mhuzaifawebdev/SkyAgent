@@ -64,28 +64,31 @@ module.exports = mod;
 "[project]/src/lib/mongodb.js [app-route] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-// lib/mongodb.js
 __turbopack_context__.s({
     "default": ()=>__TURBOPACK__default__export__
 });
 var __TURBOPACK__imported__module__$5b$externals$5d2f$mongodb__$5b$external$5d$__$28$mongodb$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/mongodb [external] (mongodb, cjs)");
 ;
-if (!process.env.MONGODB_URI) {
-    throw new Error('Invalid/Missing environment variable: "MONGODB_URI"');
-}
 const uri = process.env.MONGODB_URI;
-const options = {};
+const options = {
+    serverApi: {
+        version: __TURBOPACK__imported__module__$5b$externals$5d2f$mongodb__$5b$external$5d$__$28$mongodb$2c$__cjs$29$__["ServerApiVersion"].v1,
+        strict: true,
+        deprecationErrors: true
+    }
+};
 let client;
 let clientPromise;
+if (!process.env.MONGODB_URI) {
+    throw new Error("Please add your Mongo URI to .env.local");
+}
 if ("TURBOPACK compile-time truthy", 1) {
-    // In development mode, use a global variable so that the value
-    // is preserved across module reloads caused by HMR (Hot Module Replacement).
-    let globalWithMongo = ("TURBOPACK ident replacement", globalThis);
-    if (!globalWithMongo._mongoClientPromise) {
+    // Use a global var to preserve connection in dev mode
+    if (!("TURBOPACK ident replacement", globalThis)._mongoClientPromise) {
         client = new __TURBOPACK__imported__module__$5b$externals$5d2f$mongodb__$5b$external$5d$__$28$mongodb$2c$__cjs$29$__["MongoClient"](uri, options);
-        globalWithMongo._mongoClientPromise = client.connect();
+        ("TURBOPACK ident replacement", globalThis)._mongoClientPromise = client.connect();
     }
-    clientPromise = globalWithMongo._mongoClientPromise;
+    clientPromise = ("TURBOPACK ident replacement", globalThis)._mongoClientPromise;
 } else //TURBOPACK unreachable
 ;
 const __TURBOPACK__default__export__ = clientPromise;
@@ -93,71 +96,89 @@ const __TURBOPACK__default__export__ = clientPromise;
 "[project]/src/app/api/todos/route.js [app-route] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-// src/app/api/todos/route.js
 __turbopack_context__.s({
+    "DELETE": ()=>DELETE,
     "GET": ()=>GET,
-    "POST": ()=>POST
+    "POST": ()=>POST,
+    "PUT": ()=>PUT
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$mongodb$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/mongodb.js [app-route] (ecmascript)");
 ;
 async function GET() {
     try {
         const client = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$mongodb$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"];
-        const db = client.db('todoApp');
-        const todos = await db.collection('todos').find({}).toArray();
-        // Convert MongoDB _id to string for React compatibility
-        const processedTodos = todos.map((todo)=>({
-                ...todo,
-                id: todo._id.toString()
-            }));
-        return new Response(JSON.stringify(processedTodos), {
-            status: 200,
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
+        const db = client.db("todoApp");
+        const todos = await db.collection("todos").find({}).sort({
+            pinned: -1,
+            createdAt: -1
+        }).toArray();
+        return Response.json(todos);
     } catch (error) {
-        console.error('GET /api/todos error:', error);
-        return new Response(JSON.stringify({
-            error: error.message
-        }), {
-            status: 500,
-            headers: {
-                'Content-Type': 'application/json'
-            }
+        return Response.json({
+            error: "Failed to fetch todos"
+        }, {
+            status: 500
         });
     }
 }
 async function POST(req) {
     try {
-        const data = await req.json();
-        // Add server-side timestamp and validation
-        const todoData = {
-            ...data,
-            createdAt: new Date(),
-            updatedAt: new Date(),
-            completed: data.completed || false,
-            pinned: data.pinned || false,
-            type: data.type || 'task'
-        };
+        const body = await req.json();
         const client = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$mongodb$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"];
-        const db = client.db('todoApp');
-        const result = await db.collection('todos').insertOne(todoData);
-        return new Response(JSON.stringify(result), {
-            status: 201,
-            headers: {
-                'Content-Type': 'application/json'
-            }
+        const db = client.db("todoApp");
+        const result = await db.collection("todos").insertOne({
+            ...body,
+            createdAt: new Date(body.createdAt)
+        });
+        return Response.json({
+            insertedId: result.insertedId
         });
     } catch (error) {
-        console.error('POST /api/todos error:', error);
-        return new Response(JSON.stringify({
-            error: error.message
-        }), {
-            status: 500,
-            headers: {
-                'Content-Type': 'application/json'
-            }
+        return Response.json({
+            error: "Failed to add todo"
+        }, {
+            status: 500
+        });
+    }
+}
+async function PUT(req) {
+    try {
+        const body = await req.json();
+        const { id, ...updateFields } = body;
+        const client = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$mongodb$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"];
+        const db = client.db("todoApp");
+        await db.collection("todos").updateOne({
+            id
+        }, {
+            $set: updateFields
+        });
+        return Response.json({
+            message: "Todo updated"
+        });
+    } catch (error) {
+        return Response.json({
+            error: "Failed to update todo"
+        }, {
+            status: 500
+        });
+    }
+}
+async function DELETE(req) {
+    try {
+        const { id } = await req.json();
+        const client = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$mongodb$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"];
+        const db = client.db("todoApp");
+        await db.collection("todos").deleteOne({
+            id
+        });
+        return Response.json({
+            message: "Todo deleted"
+        });
+    } catch (error) {
+        return Response.json({
+            error: "Failed to delete todo"
+        }, {
+            status: 500
         });
     }
 }

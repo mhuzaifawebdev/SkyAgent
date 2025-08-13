@@ -32,7 +32,7 @@ export default function SkylineApp() {
         <div className="relative w-full max-w-md">
           {/* Back button */}
           <button
-            onClick={() => setCurrentView('homepage')}
+            onClick={() => setCurrentView('')}
             className="mb-4 text-gray-400 hover:text-white transition-colors flex items-center space-x-2"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

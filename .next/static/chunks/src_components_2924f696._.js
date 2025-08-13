@@ -316,6 +316,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$funnel$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Filter$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/funnel.js [app-client] (ecmascript) <export default as Filter>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$minimize$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Minimize2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/minimize-2.js [app-client] (ecmascript) <export default as Minimize2>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/trash-2.js [app-client] (ecmascript) <export default as Trash2>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$refresh$2d$cw$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__RefreshCw$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/refresh-cw.js [app-client] (ecmascript) <export default as RefreshCw>");
 ;
 var _s = __turbopack_context__.k.signature();
 'use client';
@@ -324,58 +325,7 @@ var _s = __turbopack_context__.k.signature();
 ;
 const TodoWidget = ()=>{
     _s();
-    const [todos, setTodos] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([
-        {
-            id: 1,
-            title: 'From Agent: Redesign the Skyline website',
-            category: 'P2',
-            date: null,
-            completed: false,
-            pinned: false,
-            type: 'email',
-            createdAt: new Date('2024-08-01')
-        },
-        {
-            id: 2,
-            title: 'problems of software team because of erp',
-            category: null,
-            date: 'Aug 4',
-            completed: false,
-            pinned: true,
-            type: 'task',
-            createdAt: new Date('2024-08-04')
-        },
-        {
-            id: 3,
-            title: 'discussion on software about software etc products',
-            category: null,
-            date: 'Aug 4',
-            completed: false,
-            pinned: true,
-            type: 'task',
-            createdAt: new Date('2024-08-04')
-        },
-        {
-            id: 4,
-            title: 'discussion on cold emailing',
-            category: null,
-            date: 'Aug 4',
-            completed: false,
-            pinned: true,
-            type: 'task',
-            createdAt: new Date('2024-08-04')
-        },
-        {
-            id: 5,
-            title: 'have a meeting with tom and alex regarding team',
-            category: null,
-            date: 'Aug 4',
-            completed: false,
-            pinned: false,
-            type: 'task',
-            createdAt: new Date('2024-08-04')
-        }
-    ]);
+    const [todos, setTodos] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [newTodo, setNewTodo] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
     const [searchQuery, setSearchQuery] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
     const [showAllTasks, setShowAllTasks] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
@@ -384,80 +334,254 @@ const TodoWidget = ()=>{
     const [sortBy, setSortBy] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('createdAt'); // 'createdAt', 'title', 'date'
     const [showFilterDropdown, setShowFilterDropdown] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [activeFilter, setActiveFilter] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('all'); // 'all', 'completed', 'pending', 'pinned'
-    const [deletingTasks, setDeletingTasks] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(new Set()); // Track tasks being deleted for animation
-    const addTodo = ()=>{
-        if (newTodo.trim()) {
-            const todo = {
-                id: Date.now(),
-                title: newTodo.trim(),
+    const [deletingTasks, setDeletingTasks] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(new Set());
+    const seededRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(false);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "TodoWidget.useEffect": ()=>{
+            fetchTodos();
+            // close dropdown when clicking outside
+            const onDoc = {
+                "TodoWidget.useEffect.onDoc": (e)=>{
+                    const el = e.target;
+                    if (!el || typeof el.closest !== 'function') return;
+                    if (!el.closest('.todo-filter-root')) {
+                        setShowFilterDropdown(false);
+                    }
+                }
+            }["TodoWidget.useEffect.onDoc"];
+            document.addEventListener('click', onDoc);
+            return ({
+                "TodoWidget.useEffect": ()=>document.removeEventListener('click', onDoc)
+            })["TodoWidget.useEffect"];
+        }
+    }["TodoWidget.useEffect"], []);
+    // --- API helpers ---
+    const fetchTodos = async ()=>{
+        try {
+            const res = await fetch('/api/todos');
+            if (!res.ok) throw new Error('Failed to fetch todos');
+            const data = await res.json();
+            if (!Array.isArray(data)) {
+                setTodos([]);
+                return;
+            }
+            // Convert createdAt strings to Date objects for client-side sorting
+            const transformed = data.map((t)=>({
+                    ...t,
+                    createdAt: t.createdAt ? new Date(t.createdAt) : new Date()
+                }));
+            // if DB empty, seed with your original hard-coded todos (one-time)
+            if (transformed.length === 0 && !seededRef.current) {
+                seededRef.current = true;
+                await seedInitialTodos();
+                return fetchTodos();
+            }
+            setTodos(transformed);
+        } catch (err) {
+            console.error('fetchTodos error:', err);
+        }
+    };
+    // Seed the DB with your original example todos (keeps the same content/createdAt values)
+    const seedInitialTodos = async ()=>{
+        const initial = [
+            {
+                id: 1,
+                title: 'From Agent: Redesign the Skyline website',
+                category: 'P2',
+                date: null,
+                completed: false,
+                pinned: false,
+                type: 'email',
+                createdAt: new Date('2024-08-01').toISOString()
+            },
+            {
+                id: 2,
+                title: 'problems of software team because of erp',
                 category: null,
-                date: new Date().toLocaleDateString('en-US', {
-                    month: 'short',
-                    day: 'numeric'
-                }),
+                date: 'Aug 4',
+                completed: false,
+                pinned: true,
+                type: 'task',
+                createdAt: new Date('2024-08-04').toISOString()
+            },
+            {
+                id: 3,
+                title: 'discussion on software about software etc products',
+                category: null,
+                date: 'Aug 4',
+                completed: false,
+                pinned: true,
+                type: 'task',
+                createdAt: new Date('2024-08-04').toISOString()
+            },
+            {
+                id: 4,
+                title: 'discussion on cold emailing',
+                category: null,
+                date: 'Aug 4',
+                completed: false,
+                pinned: true,
+                type: 'task',
+                createdAt: new Date('2024-08-04').toISOString()
+            },
+            {
+                id: 5,
+                title: 'have a meeting with tom and alex regarding team',
+                category: null,
+                date: 'Aug 4',
                 completed: false,
                 pinned: false,
                 type: 'task',
-                createdAt: new Date()
-            };
-            setTodos([
-                ...todos,
-                todo
-            ]);
-            setNewTodo('');
+                createdAt: new Date('2024-08-04').toISOString()
+            }
+        ];
+        for (const t of initial){
+            try {
+                await fetch('/api/todos', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(t)
+                });
+            } catch (err) {
+                console.error('seed error:', err);
+            }
         }
     };
-    const toggleTodo = (id)=>{
-        setTodos(todos.map((todo)=>todo.id === id ? {
+    const addTodo = async ()=>{
+        if (!newTodo.trim()) return;
+        const todo = {
+            id: Date.now(),
+            title: newTodo.trim(),
+            category: null,
+            date: new Date().toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric'
+            }),
+            completed: false,
+            pinned: false,
+            type: 'task',
+            createdAt: new Date()
+        };
+        // Optimistic UI update
+        setTodos((s)=>[
+                ...s,
+                todo
+            ]);
+        setNewTodo('');
+        try {
+            const res = await fetch('/api/todos', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    ...todo,
+                    createdAt: todo.createdAt.toISOString()
+                })
+            });
+            const result = await res.json();
+        } catch (err) {
+            console.error('addTodo error:', err);
+            // on failure, re-fetch to restore canonical state
+            fetchTodos();
+        }
+    };
+    const updateTodoOnServer = async (updatedTodo)=>{
+        try {
+            const bodyToSend = {
+                ...updatedTodo,
+                createdAt: updatedTodo.createdAt instanceof Date ? updatedTodo.createdAt.toISOString() : updatedTodo.createdAt
+            };
+            const res = await fetch('/api/todos', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(bodyToSend)
+            });
+            const result = await res.json();
+        } catch (err) {
+            console.error('updateTodoOnServer error:', err);
+        }
+    };
+    const toggleTodo = async (id)=>{
+        const updated = todos.map((todo)=>todo.id === id ? {
                 ...todo,
                 completed: !todo.completed
-            } : todo));
+            } : todo);
+        setTodos(updated);
+        const updatedTodo = updated.find((t)=>t.id === id);
+        await updateTodoOnServer(updatedTodo);
     };
-    const togglePin = (id)=>{
-        setTodos(todos.map((todo)=>todo.id === id ? {
+    const togglePin = async (id)=>{
+        const updated = todos.map((todo)=>todo.id === id ? {
                 ...todo,
                 pinned: !todo.pinned
-            } : todo));
+            } : todo);
+        setTodos(updated);
+        const updatedTodo = updated.find((t)=>t.id === id);
+        await updateTodoOnServer(updatedTodo);
     };
     const deleteTodo = (id)=>{
-        // Add task to deleting set for animation
+        // add to deleting set for animation
         setDeletingTasks((prev)=>new Set([
                 ...prev,
                 id
             ]));
-        // Remove task after animation delay
-        setTimeout(()=>{
-            setTodos(todos.filter((todo)=>todo.id !== id));
+        // remove from state after animation delay and call API
+        setTimeout(async ()=>{
+            const removed = todos.find((t)=>t.id === id);
+            setTodos((prev)=>prev.filter((t)=>t.id !== id));
             setDeletingTasks((prev)=>{
-                const newSet = new Set(prev);
-                newSet.delete(id);
-                return newSet;
+                const ns = new Set(prev);
+                ns.delete(id);
+                return ns;
             });
+            try {
+                const res = await fetch('/api/todos', {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        id
+                    })
+                });
+                const result = await res.json();
+            } catch (err) {
+                console.error('delete error:', err);
+                // revert on failure
+                setTodos((prev)=>[
+                        ...prev,
+                        removed
+                    ]);
+            }
         }, 200);
     };
-    const assignToCalendar = (id)=>{
+    const assignToCalendar = async (id)=>{
         const todo = todos.find((t)=>t.id === id);
-        console.log('Assigning to Google Calendar:', todo);
-        setTodos(todos.map((t)=>t.id === id ? {
+        if (!todo) return;
+        const updated = todos.map((t)=>t.id === id ? {
                 ...t,
                 assignedToCalendar: true
-            } : t));
+            } : t);
+        setTodos(updated);
+        // notify user (keeps original UX)
         alert('Task "'.concat(todo.title, '" has been assigned to Google Calendar!'));
+        // persist
+        await updateTodoOnServer(updated.find((t)=>t.id === id));
     };
-    const toggleMinimize = ()=>{
-        setIsMinimized(!isMinimized);
-    };
-    const toggleSort = ()=>{
-        setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
-    };
+    const toggleMinimize = ()=>setIsMinimized((s)=>!s);
+    const toggleSort = ()=>setSortOrder((s)=>s === 'asc' ? 'desc' : 'asc');
     const handleFilterChange = (filter)=>{
         setActiveFilter(filter);
         setShowFilterDropdown(false);
     };
-    // Filter todos based on active filter
+    // --- Filtering & sorting helpers ---
     const getFilteredTodos = ()=>{
         let filtered = todos.filter((todo)=>todo.title.toLowerCase().includes(searchQuery.toLowerCase()));
-        // Apply active filter
         switch(activeFilter){
             case 'completed':
                 filtered = filtered.filter((todo)=>todo.completed);
@@ -473,30 +597,45 @@ const TodoWidget = ()=>{
         }
         return filtered;
     };
-    // Sort todos
+    const parseDateForSort = (dateStr)=>{
+        if (!dateStr) return null;
+        const d = new Date(dateStr);
+        if (!isNaN(d.getTime())) return d;
+        // Try adding current year for short strings like "Aug 4"
+        const tryYear = new Date("".concat(dateStr, " ").concat(new Date().getFullYear()));
+        if (!isNaN(tryYear.getTime())) return tryYear;
+        return null;
+    };
     const getSortedTodos = (todosToSort)=>{
         return [
             ...todosToSort
         ].sort((a, b)=>{
-            let comparison = 0;
-            // First sort by pinned status (pinned items always come first)
+            // pinned items come first
             if (a.pinned && !b.pinned) return -1;
             if (!a.pinned && b.pinned) return 1;
-            // Then sort by the selected criteria
+            let comparison = 0;
             switch(sortBy){
                 case 'title':
                     comparison = a.title.localeCompare(b.title);
                     break;
                 case 'date':
-                    if (!a.date && !b.date) comparison = 0;
-                    else if (!a.date) comparison = 1;
-                    else if (!b.date) comparison = -1;
-                    else comparison = new Date(a.date) - new Date(b.date);
-                    break;
+                    {
+                        var _parseDateForSort, _parseDateForSort1;
+                        var _parseDateForSort_getTime;
+                        const da = (_parseDateForSort_getTime = (_parseDateForSort = parseDateForSort(a.date)) === null || _parseDateForSort === void 0 ? void 0 : _parseDateForSort.getTime()) !== null && _parseDateForSort_getTime !== void 0 ? _parseDateForSort_getTime : Infinity;
+                        var _parseDateForSort_getTime1;
+                        const db = (_parseDateForSort_getTime1 = (_parseDateForSort1 = parseDateForSort(b.date)) === null || _parseDateForSort1 === void 0 ? void 0 : _parseDateForSort1.getTime()) !== null && _parseDateForSort_getTime1 !== void 0 ? _parseDateForSort_getTime1 : Infinity;
+                        comparison = da - db;
+                        break;
+                    }
                 case 'createdAt':
                 default:
-                    comparison = a.createdAt - b.createdAt;
-                    break;
+                    {
+                        const ca = a.createdAt instanceof Date ? a.createdAt.getTime() : new Date(a.createdAt).getTime();
+                        const cb = b.createdAt instanceof Date ? b.createdAt.getTime() : new Date(b.createdAt).getTime();
+                        comparison = ca - cb;
+                        break;
+                    }
             }
             return sortOrder === 'asc' ? comparison : -comparison;
         });
@@ -514,6 +653,12 @@ const TodoWidget = ()=>{
                 return 'All';
         }
     };
+    const [isRefreshing, setIsRefreshing] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const handleRefresh = async ()=>{
+        setIsRefreshing(true);
+        await fetchTodos();
+        setTimeout(()=>setIsRefreshing(false), 600); // small delay so animation is visible
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "jsx-5748bf24769328a5" + " " + "bg-[#1c1c1c]/50 backdrop-blur-md border border-gray-700/30 rounded-2xl hover:bg-[#1c1c1c]/30 transition-all duration-300 p-4 mb-4",
         children: [
@@ -525,7 +670,7 @@ const TodoWidget = ()=>{
                         children: "To-dos"
                     }, void 0, false, {
                         fileName: "[project]/src/components/TodoList.jsx",
-                        lineNumber: 207,
+                        lineNumber: 345,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     !isMinimized && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -535,7 +680,7 @@ const TodoWidget = ()=>{
                                 className: "w-4 h-4 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/TodoList.jsx",
-                                lineNumber: 212,
+                                lineNumber: 350,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -546,18 +691,34 @@ const TodoWidget = ()=>{
                                 className: "jsx-5748bf24769328a5" + " " + "w-full bg-gray-800/50 border border-gray-600/50 rounded-md pl-10 pr-4 py-2 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-gray-500"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/TodoList.jsx",
-                                lineNumber: 213,
+                                lineNumber: 351,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/TodoList.jsx",
-                        lineNumber: 211,
+                        lineNumber: 349,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "jsx-5748bf24769328a5" + " " + "flex items-center gap-2",
                         children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: handleRefresh,
+                                title: "Refresh",
+                                className: "jsx-5748bf24769328a5" + " " + "p-2 bg-gray-800/50 hover:bg-gray-700 rounded-full transition-colors",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$refresh$2d$cw$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__RefreshCw$3e$__["RefreshCw"], {
+                                    className: "w-4 h-4 text-blue-400 ".concat(isRefreshing ? "animate-spin" : "")
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/TodoList.jsx",
+                                    lineNumber: 367,
+                                    columnNumber: 11
+                                }, ("TURBOPACK compile-time value", void 0))
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/TodoList.jsx",
+                                lineNumber: 362,
+                                columnNumber: 9
+                            }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: toggleMinimize,
                                 title: isMinimized ? "Maximize" : "Minimize",
@@ -566,18 +727,18 @@ const TodoWidget = ()=>{
                                     className: "w-4 h-4 text-gray-400"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/TodoList.jsx",
-                                    lineNumber: 230,
-                                    columnNumber: 15
+                                    lineNumber: 378,
+                                    columnNumber: 28
                                 }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$minimize$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Minimize2$3e$__["Minimize2"], {
                                     className: "w-4 h-4 text-gray-400"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/TodoList.jsx",
-                                    lineNumber: 232,
-                                    columnNumber: 15
+                                    lineNumber: 378,
+                                    columnNumber: 78
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/TodoList.jsx",
-                                lineNumber: 224,
+                                lineNumber: 373,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -586,24 +747,24 @@ const TodoWidget = ()=>{
                                     className: "w-4 h-4 text-gray-400"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/TodoList.jsx",
-                                    lineNumber: 236,
+                                    lineNumber: 381,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/TodoList.jsx",
-                                lineNumber: 235,
+                                lineNumber: 380,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/TodoList.jsx",
-                        lineNumber: 223,
+                        lineNumber: 361,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/TodoList.jsx",
-                lineNumber: 206,
+                lineNumber: 344,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             !isMinimized && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -612,17 +773,17 @@ const TodoWidget = ()=>{
                         className: "jsx-5748bf24769328a5" + " " + "flex items-center justify-between mb-3",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "jsx-5748bf24769328a5" + " " + "relative",
+                                className: "jsx-5748bf24769328a5" + " " + "relative todo-filter-root",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: ()=>setShowFilterDropdown(!showFilterDropdown),
+                                        onClick: ()=>setShowFilterDropdown((s)=>!s),
                                         className: "jsx-5748bf24769328a5" + " " + "flex items-center gap-2 text-white text-sm bg-gray-800/50 px-3 py-1 rounded hover:bg-gray-800/70 transition-colors",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
                                                 className: "w-4 h-4"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/TodoList.jsx",
-                                                lineNumber: 251,
+                                                lineNumber: 396,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -630,20 +791,20 @@ const TodoWidget = ()=>{
                                                 children: getFilterLabel()
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/TodoList.jsx",
-                                                lineNumber: 252,
+                                                lineNumber: 397,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
                                                 className: "w-4 h-4 transition-transform ".concat(showFilterDropdown ? 'rotate-180' : '')
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/TodoList.jsx",
-                                                lineNumber: 253,
+                                                lineNumber: 398,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/TodoList.jsx",
-                                        lineNumber: 247,
+                                        lineNumber: 392,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     showFilterDropdown && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -659,18 +820,18 @@ const TodoWidget = ()=>{
                                                 children: filter.charAt(0).toUpperCase() + filter.slice(1)
                                             }, filter, false, {
                                                 fileName: "[project]/src/components/TodoList.jsx",
-                                                lineNumber: 260,
+                                                lineNumber: 405,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/TodoList.jsx",
-                                        lineNumber: 258,
+                                        lineNumber: 403,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/TodoList.jsx",
-                                lineNumber: 246,
+                                lineNumber: 391,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -684,39 +845,77 @@ const TodoWidget = ()=>{
                                             className: "w-4 h-4 text-gray-400 transition-transform ".concat(sortOrder === 'asc' ? 'rotate-180' : '')
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/TodoList.jsx",
-                                            lineNumber: 280,
+                                            lineNumber: 425,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/TodoList.jsx",
-                                        lineNumber: 275,
+                                        lineNumber: 420,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
+                                        value: sortBy,
+                                        onChange: (e)=>setSortBy(e.target.value),
+                                        className: "jsx-5748bf24769328a5" + " " + "bg-gray-800/50 border border-gray-600/50 text-sm text-white px-2 py-1 rounded",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                value: "createdAt",
+                                                className: "jsx-5748bf24769328a5",
+                                                children: "Newest"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/TodoList.jsx",
+                                                lineNumber: 436,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                value: "title",
+                                                className: "jsx-5748bf24769328a5",
+                                                children: "Title"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/TodoList.jsx",
+                                                lineNumber: 437,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                value: "date",
+                                                className: "jsx-5748bf24769328a5",
+                                                children: "Date"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/TodoList.jsx",
+                                                lineNumber: 438,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/TodoList.jsx",
+                                        lineNumber: 431,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: ()=>setShowFilterDropdown(!showFilterDropdown),
+                                        onClick: ()=>setShowFilterDropdown((s)=>!s),
                                         className: "jsx-5748bf24769328a5" + " " + "p-1 hover:bg-gray-800/30 rounded transition-colors",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$funnel$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Filter$3e$__["Filter"], {
                                             className: "w-4 h-4 transition-colors ".concat(activeFilter !== 'all' ? 'text-blue-400' : 'text-gray-400')
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/TodoList.jsx",
-                                            lineNumber: 288,
+                                            lineNumber: 445,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/TodoList.jsx",
-                                        lineNumber: 284,
+                                        lineNumber: 441,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/TodoList.jsx",
-                                lineNumber: 274,
+                                lineNumber: 419,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/TodoList.jsx",
-                        lineNumber: 245,
+                        lineNumber: 390,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -724,7 +923,7 @@ const TodoWidget = ()=>{
                         children: "skylineagent@trymartin.com"
                     }, void 0, false, {
                         fileName: "[project]/src/components/TodoList.jsx",
-                        lineNumber: 296,
+                        lineNumber: 451,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -734,181 +933,233 @@ const TodoWidget = ()=>{
                             children: searchQuery || activeFilter !== 'all' ? 'No matching tasks found' : 'No tasks yet'
                         }, void 0, false, {
                             fileName: "[project]/src/components/TodoList.jsx",
-                            lineNumber: 301,
+                            lineNumber: 456,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0)) : filteredAndSortedTodos.map((todo)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "jsx-5748bf24769328a5" + " " + "flex items-start gap-3 p-2 hover:bg-gray-800/30 rounded-md cursor-pointer transition-all duration-200 ".concat(deletingTasks.has(todo.id) ? 'opacity-0 transform scale-95' : 'opacity-100 transform scale-100'),
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                         type: "checkbox",
-                                        checked: todo.completed,
+                                        checked: !!todo.completed,
                                         onChange: ()=>toggleTodo(todo.id),
                                         className: "jsx-5748bf24769328a5" + " " + "mt-1 w-4 h-4 bg-transparent border border-gray-600 rounded accent-blue-500"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/TodoList.jsx",
-                                        lineNumber: 312,
+                                        lineNumber: 467,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "jsx-5748bf24769328a5" + " " + "flex-1",
+                                        className: "jsx-5748bf24769328a5" + " " + "flex-1 min-w-0",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "jsx-5748bf24769328a5" + " " + "text-white text-sm transition-colors ".concat(todo.completed ? 'line-through text-gray-500' : ''),
-                                                children: todo.title
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/components/TodoList.jsx",
-                                                lineNumber: 320,
-                                                columnNumber: 21
-                                            }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "jsx-5748bf24769328a5" + " " + "flex items-center gap-2 mt-1",
+                                                className: "jsx-5748bf24769328a5" + " " + "flex items-center gap-2 mb-1",
                                                 children: [
-                                                    todo.category && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "jsx-5748bf24769328a5" + " " + "text-yellow-500 text-xs bg-yellow-500/20 px-2 py-0.5 rounded",
-                                                        children: todo.category
+                                                    todo.pinned && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$pin$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Pin$3e$__["Pin"], {
+                                                        className: "w-3 h-3 text-yellow-400 flex-shrink-0"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/TodoList.jsx",
-                                                        lineNumber: 328,
-                                                        columnNumber: 25
+                                                        lineNumber: 476,
+                                                        columnNumber: 39
                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                    todo.date && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "jsx-5748bf24769328a5" + " " + "text-gray-400 text-xs",
-                                                        children: todo.date
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "jsx-5748bf24769328a5" + " " + "text-sm ".concat(todo.completed ? 'text-gray-500 line-through' : 'text-white', " truncate"),
+                                                        children: todo.title
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/TodoList.jsx",
-                                                        lineNumber: 333,
-                                                        columnNumber: 25
-                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                    todo.assignedToCalendar && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "jsx-5748bf24769328a5" + " " + "text-xs text-green-400",
-                                                        children: "📅 In Calendar"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/components/TodoList.jsx",
-                                                        lineNumber: 336,
-                                                        columnNumber: 25
+                                                        lineNumber: 477,
+                                                        columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/TodoList.jsx",
-                                                lineNumber: 326,
+                                                lineNumber: 475,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "jsx-5748bf24769328a5" + " " + "flex items-center gap-2 text-xs text-gray-400",
+                                                children: [
+                                                    todo.category && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "jsx-5748bf24769328a5" + " " + "bg-yellow-500/20 text-yellow-500 px-2 py-0.5 rounded",
+                                                        children: todo.category
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/TodoList.jsx",
+                                                        lineNumber: 484,
+                                                        columnNumber: 25
+                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                    todo.date && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "jsx-5748bf24769328a5" + " " + "flex items-center gap-1",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Calendar$3e$__["Calendar"], {
+                                                                className: "w-3 h-3"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/components/TodoList.jsx",
+                                                                lineNumber: 490,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                className: "jsx-5748bf24769328a5",
+                                                                children: todo.date
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/components/TodoList.jsx",
+                                                                lineNumber: 491,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/components/TodoList.jsx",
+                                                        lineNumber: 489,
+                                                        columnNumber: 25
+                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                    todo.type === 'email' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "jsx-5748bf24769328a5" + " " + "text-blue-400",
+                                                        children: "📧"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/TodoList.jsx",
+                                                        lineNumber: 494,
+                                                        columnNumber: 49
+                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                    todo.assignedToCalendar && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "jsx-5748bf24769328a5" + " " + "text-green-400",
+                                                        children: "📅 In Calendar"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/TodoList.jsx",
+                                                        lineNumber: 495,
+                                                        columnNumber: 51
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/components/TodoList.jsx",
+                                                lineNumber: 482,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/TodoList.jsx",
-                                        lineNumber: 319,
+                                        lineNumber: 474,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "jsx-5748bf24769328a5" + " " + "flex items-center gap-1",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                onClick: ()=>togglePin(todo.id),
-                                                title: todo.pinned ? 'Unpin' : 'Pin',
-                                                className: "jsx-5748bf24769328a5" + " " + "p-1 rounded hover:bg-gray-800/30 transition-colors ".concat(todo.pinned ? 'text-yellow-400' : 'text-gray-500'),
+                                                onClick: (e)=>{
+                                                    e.stopPropagation();
+                                                    togglePin(todo.id);
+                                                },
+                                                title: todo.pinned ? "Unpin" : "Pin",
+                                                className: "jsx-5748bf24769328a5" + " " + "p-1 hover:bg-gray-700 rounded transition-colors ".concat(todo.pinned ? 'text-yellow-400' : 'text-gray-500'),
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$pin$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Pin$3e$__["Pin"], {
-                                                    className: "w-3 h-3"
+                                                    className: "w-3 h-3 ".concat(todo.pinned ? 'fill-current' : '')
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/TodoList.jsx",
-                                                    lineNumber: 349,
+                                                    lineNumber: 510,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/TodoList.jsx",
-                                                lineNumber: 342,
+                                                lineNumber: 500,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                onClick: ()=>assignToCalendar(todo.id),
-                                                title: "Assign to Google Calendar",
-                                                className: "jsx-5748bf24769328a5" + " " + "p-1 rounded hover:bg-gray-800/30 text-blue-400 transition-colors",
+                                                onClick: (e)=>{
+                                                    e.stopPropagation();
+                                                    assignToCalendar(todo.id);
+                                                },
+                                                title: "Assign to Calendar",
+                                                className: "jsx-5748bf24769328a5" + " " + "p-1 hover:bg-gray-700 rounded text-blue-400 transition-colors",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Calendar$3e$__["Calendar"], {
                                                     className: "w-3 h-3"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/TodoList.jsx",
-                                                    lineNumber: 357,
+                                                    lineNumber: 521,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/TodoList.jsx",
-                                                lineNumber: 352,
+                                                lineNumber: 513,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                onClick: ()=>deleteTodo(todo.id),
-                                                title: "Delete task",
-                                                className: "jsx-5748bf24769328a5" + " " + "p-1 rounded hover:bg-red-900/30 text-red-400 hover:text-red-300 transition-colors",
+                                                onClick: (e)=>{
+                                                    e.stopPropagation();
+                                                    deleteTodo(todo.id);
+                                                },
+                                                title: "Delete",
+                                                className: "jsx-5748bf24769328a5" + " " + "p-1 hover:bg-red-900/30 rounded text-red-400 hover:text-red-300 transition-colors",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
                                                     className: "w-3 h-3"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/TodoList.jsx",
-                                                    lineNumber: 365,
+                                                    lineNumber: 532,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/TodoList.jsx",
-                                                lineNumber: 360,
+                                                lineNumber: 524,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
                                                 className: "w-4 h-4 text-gray-400 hover:text-white cursor-pointer transition-colors"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/TodoList.jsx",
-                                                lineNumber: 368,
+                                                lineNumber: 535,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/TodoList.jsx",
-                                        lineNumber: 341,
+                                        lineNumber: 499,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, todo.id, true, {
                                 fileName: "[project]/src/components/TodoList.jsx",
-                                lineNumber: 306,
+                                lineNumber: 461,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/src/components/TodoList.jsx",
-                        lineNumber: 299,
+                        lineNumber: 454,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "jsx-5748bf24769328a5" + " " + "flex items-center space-x-2 mt-4",
+                        className: "jsx-5748bf24769328a5" + " " + "mt-4 flex gap-2",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                 type: "text",
-                                placeholder: "Add a new task...",
                                 value: newTodo,
                                 onChange: (e)=>setNewTodo(e.target.value),
                                 onKeyPress: (e)=>e.key === 'Enter' && addTodo(),
-                                className: "jsx-5748bf24769328a5" + " " + "flex-1 px-3 py-2 bg-gray-800/50 border border-gray-600/50 rounded-md text-sm focus:outline-none focus:border-gray-500 placeholder-gray-400 text-white transition-colors"
+                                placeholder: "Add a new task...",
+                                className: "jsx-5748bf24769328a5" + " " + "flex-1 bg-gray-800/50 border border-gray-600/50 rounded-md px-3 py-2 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-gray-500"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/TodoList.jsx",
-                                lineNumber: 377,
+                                lineNumber: 544,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: addTodo,
                                 disabled: !newTodo.trim(),
-                                className: "jsx-5748bf24769328a5" + " " + "p-2 bg-blue-600 hover:bg-blue-700 rounded-md transition-colors",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
-                                    className: "w-4 h-4 text-white"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/TodoList.jsx",
-                                    lineNumber: 390,
-                                    columnNumber: 15
-                                }, ("TURBOPACK compile-time value", void 0))
-                            }, void 0, false, {
+                                className: "jsx-5748bf24769328a5" + " " + "bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md transition-colors flex items-center gap-1",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
+                                        className: "w-4 h-4"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/TodoList.jsx",
+                                        lineNumber: 557,
+                                        columnNumber: 15
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    "Add"
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/src/components/TodoList.jsx",
-                                lineNumber: 385,
+                                lineNumber: 552,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/TodoList.jsx",
-                        lineNumber: 376,
+                        lineNumber: 543,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     (activeFilter !== 'all' || searchQuery) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -924,8 +1175,41 @@ const TodoWidget = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/TodoList.jsx",
-                        lineNumber: 396,
+                        lineNumber: 564,
                         columnNumber: 13
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "jsx-5748bf24769328a5" + " " + "mt-4 pt-4 border-t border-gray-700/50 text-xs text-gray-400 flex justify-between",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "jsx-5748bf24769328a5",
+                                children: [
+                                    filteredAndSortedTodos.filter((t)=>!t.completed).length,
+                                    " pending, ",
+                                    filteredAndSortedTodos.filter((t)=>t.completed).length,
+                                    " completed"
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/TodoList.jsx",
+                                lineNumber: 573,
+                                columnNumber: 13
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "jsx-5748bf24769328a5",
+                                children: [
+                                    filteredAndSortedTodos.filter((t)=>t.pinned).length,
+                                    " pinned"
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/TodoList.jsx",
+                                lineNumber: 576,
+                                columnNumber: 13
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/TodoList.jsx",
+                        lineNumber: 572,
+                        columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true),
@@ -940,7 +1224,7 @@ const TodoWidget = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/TodoList.jsx",
-                        lineNumber: 408,
+                        lineNumber: 586,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -951,13 +1235,13 @@ const TodoWidget = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/TodoList.jsx",
-                        lineNumber: 409,
+                        lineNumber: 587,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/TodoList.jsx",
-                lineNumber: 407,
+                lineNumber: 585,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -967,11 +1251,11 @@ const TodoWidget = ()=>{
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/TodoList.jsx",
-        lineNumber: 204,
+        lineNumber: 342,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s(TodoWidget, "dyzUvpCqVeIZrGStPZBGQSculLU=");
+_s(TodoWidget, "lOUgJ2f5vOlDsK/AGqQt0N9xoBM=");
 _c = TodoWidget;
 const __TURBOPACK__default__export__ = TodoWidget;
 var _c;
@@ -1009,7 +1293,7 @@ const GmailWidget = ()=>{
         {
             id: 1,
             sender: 'Marketing',
-            subject: 'Update on sales made on 14 aug',
+            subject: 'Update on sales made on winter season',
             preview: 'Dear Adam, Assalam-o-Alaikum In this regard, it is to infor...',
             time: '11:31 AM',
             category: 'Sales Notifications',
@@ -1020,7 +1304,7 @@ const GmailWidget = ()=>{
         {
             id: 2,
             sender: 'Skyline Sprint',
-            subject: 'Please confirm it ASAP',
+            subject: 'Your AI Powered Assistant',
             preview: "Welcome to the world of tech",
             time: '10:56 AM',
             category: null,
@@ -1041,9 +1325,9 @@ const GmailWidget = ()=>{
         },
         {
             id: 4,
-            sender: 'martin@trymartin.com',
-            subject: 'Hi from Martin!',
-            preview: 'Hey Ali! Martin here. Your email is now synced with me. Feel fr...',
+            sender: 'skyagent@try.com',
+            subject: 'Hi from SkyAgent!',
+            preview: 'Hey Boss! SkyAgent here. Your email is now synced with me. Feel fr...',
             time: 'Aug 4',
             category: null,
             categoryColor: null,

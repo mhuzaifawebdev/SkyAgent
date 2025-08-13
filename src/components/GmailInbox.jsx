@@ -10,7 +10,7 @@ const GmailWidget = () => {
     {
       id: 1,
       sender: 'Marketing',
-      subject: 'Update on sales made on 14 aug',
+      subject: 'Update on sales made on winter season',
       preview: 'Dear Adam, Assalam-o-Alaikum In this regard, it is to infor...',
       time: '11:31 AM',
       category: 'Sales Notifications',
@@ -21,7 +21,7 @@ const GmailWidget = () => {
     {
       id: 2,
       sender: 'Skyline Sprint',
-      subject: 'Please confirm it ASAP',
+      subject: 'Your AI Powered Assistant',
       preview: "Welcome to the world of tech",
       time: '10:56 AM',
       category: null,
@@ -42,9 +42,9 @@ const GmailWidget = () => {
     },
     {
       id: 4,
-      sender: 'martin@trymartin.com',
-      subject: 'Hi from Martin!',
-      preview: 'Hey Ali! Martin here. Your email is now synced with me. Feel fr...',
+      sender: 'skyagent@try.com',
+      subject: 'Hi from SkyAgent!',
+      preview: 'Hey Boss! SkyAgent here. Your email is now synced with me. Feel fr...',
       time: 'Aug 4',
       category: null,
       categoryColor: null,
